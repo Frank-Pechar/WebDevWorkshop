@@ -2,8 +2,6 @@
 
 hljs.highlightAll();
 
-// prettier-ignore
-
 //********* A S Y N C - E X E C U T I O N - P R I O R I T Y *********
 // C A S E 1
 
@@ -17,16 +15,14 @@ const clickHandler1 = function () {
   });
 
   setTimeout(() =>
-    Promise.resolve('7 CallbackQ to MicrotaskQ to CStack')
-      .then((res) => {
-       console.log(res);
+    Promise.resolve('7 CallbackQ to MicrotaskQ to CStack').then((res) => {
+      console.log(res);
     })
   );
 
-  Promise.resolve('5 MicrotaskQ w/loop to CStack')
-    .then((res) => 
-      {for (let i = 0; i < 500000000; i++) {}
-     console.log(res);
+  Promise.resolve('5 MicrotaskQ w/loop to CStack').then((res) => {
+    for (let i = 0; i < 500000000; i++) {}
+    console.log(res);
   });
 
   setTimeout(() => console.log('8 CallbackQ to CStack'), 0);
@@ -156,7 +152,7 @@ document
   .addEventListener('click', trackUserHandler);
 
 // C A S E 3
-//********* A S Y N C - E X E C U T I O N - await *********
+//********* A S Y N C - E X E C U T I O N  -  A W A I T *********
 
 const getPosition2 = function (opts) {
   console.log('08 - getPosition2 await - Start');

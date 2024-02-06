@@ -8,4 +8,5 @@ const phoneNumbers = [
 
 const result = phoneNumberDirectory(phoneNumbers);
 
+console.log(result);
 console.log(result.get('John'));

@@ -1,14 +1,14 @@
 // No recursion
-function power(base, exponent) {
-  // Initialize result to 1
-  let result = 1;
+// function power(base, exponent) {
+//   // Initialize result to 1
+//   let result = 1;
 
-  // Multiply base by itself exponent times
-  for (let i = 0; i < exponent; i++) {
-    result *= base;
-  }
-  return result;
-}
+//   // Multiply base by itself exponent times
+//   for (let i = 0; i < exponent; i++) {
+//     result *= base;
+//   }
+//   return result;
+// }
 
 function power(base, exponent) {
   // Base case - if exponent is 0, return 1

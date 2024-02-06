@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="Frank Pechar" />
+    <meta name="description" content="JavaScript Concepts - this Keyword" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.4.0/styles/atom-one-dark.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <script
+      defer
+      src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.4.0/highlight.min.js"
+    ></script>
+    <script defer src="script.js"></script>
+    <title>Frank Pechar - JavaScript Concepts Work Area - this Keyword</title>
+  </head>
+
+  <body>
+    <header>
+      <h1>JavaScript Concept Exercises</h1>
+    </header>
+    <main>
+      <h2>&ldquo;this&rdquo; Keyword Behaviours</h2>
+      <section class="case1">
+        <h3>Case1 - this Keyword - non-strict mode</h3>
+        <button class="btn-case1">CASE1</button>
+        <!-- prettier-ignore -->
+        <pre>
+          <code>
+
+//********* t h i s - K E Y W O R D - R E F E R E N C E S **********
+//*** "this" Keyword will refer to 1) Global Context (window),   ***
+//*** or, 2) INSIDE A FUNCTION - Object/owner that called the    ***
+//*** function (whether manually or through JS/Browser, 3) Bound ***
+//*** data/object.                                               ***
+//*** Reference will differ whether in strict or non-strict mode ***/
+
+// C A S E 1
+
+console.log('non-strict - global context - ', this);
+
+const logThisArrow1 = () => {
+  console.log('non-strict - arrow function call - ', this);
+};
+
+const logThis1 = function () {
+  console.log
+  ('non-strict - global context function call - ', this);
+};
+
+const logThisHandler1 = function () {
+  console.log('********************************');
+  console.log
+  ('non-strict - button click event function call - ', this);
+};
+
+const logThisArrowHandler1 = () => {
+  console.log
+  ('non-strict - button click event arrow function call - ', this);
+};
+
+const person = {
+  name: 'Frank',
+  logThis1() {
+    console.log('non-strict - object function call - ', this);
+  },
+};
+
+logThis1();
+
+logThisArrow1();
+
+person.logThis1();
+
+console.log('********************************');
+
+document.querySelector('.btn-case1')
+  .addEventListener('click', logThisHandler1);
+
+document
+  .querySelector('.btn-case1')
+  .addEventListener('click', logThisArrowHandler1);
+
+        <!-- prettier-ignore -->
+        <pre>
+          <code>
+
+('use strict');
+
+console.log('strict - global context - ', this);
+
+const logThisArrow2 = () => {
+  console.log('strict - arrow function call - ', this);
+};
+
+const logThisArrowHandler2 = () => {
+  console.log('strict - button click event arrow function call - ', this);
+};
+
+const logThis2 = function () {
+  console.log('strict - global context function call - ', this);
+};
+
+const logThisHandler2 = function () {
+  console.log('strict - button click event function call - ', this);
+};
+
+logThis2();
+
+logThisArrow2();
+
+document.querySelector('.btn-case2').addEventListener('click', logThisHandler2);
+
+document
+  .querySelector('.btn-case2')
+  .addEventListener('click', logThisArrowHandler2);
+
+
+          </code>
+        </pre>
+      </section>
+    </main>
+    <footer></footer>
+  </body>
+</html>
