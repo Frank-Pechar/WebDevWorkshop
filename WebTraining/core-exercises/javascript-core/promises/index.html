@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.4.0/styles/atom-one-dark.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <script
+      defer
+      src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.4.0/highlight.min.js"
+    ></script>
+    <script defer src="script.js"></script>
+    <title>Asynchronous JavaScript</title>
+  </head>
+  <body>
+    <header>
+      <h1>JavaScript Fun Exercises</h1>
+    </header>
+    <main>
+      <section>
+        <h2>
+          Asynchronous JavaScript <br />
+          Promises
+        </h2>
+        <h3>Promisifying</h3>
+        <button class="btn-test">TEST</button>
+        <pre>
+          <code>
+					
+// JavaScript snippet that converts a
+// callback-based function to a 
+// promise-based function
+
+const promisifyTimout = (seconds) => {
+  return new Promise(function (resolve) {
+    setTimeout(resolve, seconds * 1000);
+  });
+};
+
+function btnClickHandler1() {
+  promisifyTimout(3).then(() => {
+    console.log('Promisify setTimeout 
+      - Wait 3 seconds');
+
+  });
+}
+					
+      </code>
+      </pre>
+      </section>
+
+      <section>
+        <button class="btn-test">TEST</button>
+        <pre>
+          <code>
+					
+// JavaScript snippet that
+// callback-based function to a 
+// promise-based function
+
+const promisifyTimout = (seconds) => {
+  return new Promise(function (resolve) {
+    setTimeout(resolve, seconds * 1000);
+  });
+};
+
+function btnClickHandler1() {
+  promisifyTimout(3).then(() => {
+    console.log('Promisify setTimeout 
+      - Wait 3 seconds');
+
+  });
+}
+					
+          </code>
+        </pre>
+      </section>
+    </main>
+    <footer></footer>
+  </body>
+</html>

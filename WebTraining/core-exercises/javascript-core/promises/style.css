@@ -1,0 +1,98 @@
+:root {
+  --color-primary: hsla(252, 100%, 24%, 1);
+  --color-primary-dark: hsla(252, 100%, 10%, 1);
+  --color-secondary: hsl(45, 100%, 63%);
+  --color-secondary: hsl(45, 100%, 48%);
+  --color-secondary: hsl(30, 100%, 40%);
+}
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: clamp(0.5rem, 0.5rem + 1.5vw, 2rem);
+  color: #fff;
+}
+
+body {
+  height: 100vh;
+  height: 100svh;
+  font-family: sans-serif;
+  background: linear-gradient(#034d60, #09728d);
+  background: radial-gradient(
+    circle,
+    var(--color-primary) 40%,
+    var(--color-primary-dark) 70%
+  );
+
+  text-align: center;
+}
+
+section {
+  margin: 2rem 2rem 0;
+}
+
+h1 {
+  margin: 2rem;
+  font-size: 1.7rem;
+  text-shadow: 0.1rem 0.1rem 0.3rem #000;
+}
+
+h2 {
+  margin: 1rem;
+  font-size: 1.1rem;
+  text-shadow: 0.1rem 0.1rem 0.3rem #000;
+}
+
+h3 {
+  margin: 1rem;
+  font-size: 1rem;
+  text-shadow: 0.1rem 0.1rem 0.3rem #000;
+}
+
+button {
+  font-weight: 700;
+  border: 0;
+  line-height: 2.5;
+  padding: 0 2rem;
+  font-size: 1rem;
+  color: #fff;
+  text-shadow: 1px 1px 1px #000;
+  border-radius: 10px;
+  background-color: rgba(220, 0, 0, 1);
+  background-color: hsl(22, 100%, 43%);
+  background-color: var(--color-secondary);
+  background-image: linear-gradient(
+    to top left,
+    rgba(0, 0, 0, 0.2),
+    rgba(0, 0, 0, 0.2) 30%,
+    rgba(0, 0, 0, 0)
+  );
+  box-shadow: inset 2px 2px 3px rgba(255, 255, 255, 0.6),
+    inset -2px -2px 3px rgba(0, 0, 0, 0.6);
+}
+
+button:hover {
+  background-color: rgba(255, 0, 0, 1);
+  background-color: hsl(18, 100%, 43%);
+  cursor: pointer;
+}
+
+button:active {
+  box-shadow: inset -2px -2px 3px rgba(255, 255, 255, 0.6),
+    inset 2px 2px 3px rgba(0, 0, 0, 0.6);
+}
+
+pre {
+  margin: 1rem auto;
+  padding: 1rem;
+  text-align: left;
+  font-size: 0.8rem;
+  background-color: #343434;
+  width: fit-content;
+}

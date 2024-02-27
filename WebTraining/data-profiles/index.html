@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes"
+    />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="style.css" />
+    <script defer src="script.js"></script>
+    <title>Forms Data Exercises</title>
+  </head>
+  <body>
+    <header>
+      <h1>Forms Data Exercises</h1>
+    </header>
+    <main>
+      <section>
+        <form>
+          <ul>
+            <li>
+              <label for="name">Name:</label>
+              <input
+                type="text"
+                id="name"
+                name="user_name"
+                placeholder="Full Name"
+                required
+                autofocus
+              />
+            </li>
+            <li>
+              <label for="email">Email:</label>
+              <input
+                type="email"
+                inputmode="email"
+                id="email"
+                name="user_email"
+                placeholder="Email Address"
+                required
+              />
+            </li>
+            <li>
+              <label for="web">Website:</label>
+              <input
+                type="tel"
+                inputmode="url"
+                id="web"
+                name="user_phone"
+                placeholder="Phone Number"
+                required
+              />
+            </li>
+            <li>
+              <label for="tel">Phone:</label>
+              <input
+                type="tel"
+                inputmode="tel"
+                id="tel"
+                name="user_phone"
+                placeholder="Phone Number"
+                required
+              />
+            </li>
+            <li>
+              <label for="msg">Message:</label>
+              <textarea
+                id="msg"
+                name="user_message"
+                spellcheck="true"
+              ></textarea>
+            </li>
+            <button type="submit">Send your message</button>
+          </ul>
+        </form>
+      </section>
+    </main>
+    <footer></footer>
+  </body>
+</html>
